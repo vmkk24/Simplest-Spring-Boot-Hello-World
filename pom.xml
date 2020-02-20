@@ -22,21 +22,16 @@
 			<plugin>
         			<groupId>org.apache.maven.plugins</groupId>
         			<artifactId>maven-war-plugin</artifactId>
-        			<version>3.2.3</version>
-			</plugin>
-			<plugin>
-    				<groupId>org.apache.tomcat.maven</groupId>
-    				<artifactId>tomcat7-maven-plugin</artifactId>
-    				<version>2.2</version>
-    			<configuration>
-        			<url>http://localhost:8080/manager/text</url>
-        			<server>TomcatServer</server>
-        			<path>/hello-world</path>
-    			</configuration>
+        			<version>2.1.1</version>
 			</plugin>
 			</plugins>
 	</build>
-
+<distributionManagement>
+  <snapshotRepository>
+    <id>nexus</id>
+    <url>http://redhat1000.southindia.cloudapp.azure.com:8081/nexus/content/repositories/snapshots</url>
+  </snapshotRepository>
+</distributionManagement>
 	<dependencies>
 
 		<dependency>
